@@ -37,3 +37,29 @@ form button{
 form button:hover{
     background-color: #0097e6;
 }
+.error_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .error_div{
+    background-color: white;
+  }
+  .error {
+    color: #f73030;
+    font-size: 12px;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+  }
+  .sign-text{
+    background-color: white;
+  }
+  .sign-link {
+    color: #f73030;
+    cursor: pointer;
+    
+  }
+  .sign-link:hover {
+    color: rgb(16, 116, 247);
+  }

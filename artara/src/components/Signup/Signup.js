@@ -9,6 +9,14 @@ function Signup() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     const [image, setImage] = useState('');
+    const [hasAccount, setHasAccount] = useState(false);
+
+    const handleLogin = () => {
+        console.log("Login");
+    }
+    const handleSignup = () => {
+        console.log("Signup");
+    };
   return (
     <div>
         <form>
@@ -35,9 +43,41 @@ function Signup() {
             <div className="error-div">
                 <label>{error}</label>
             </div>
-            <div className="submit-div">
+            {/* <div className="submit-div">
                 <button type="submit">Submit</button>
+            </div> */}
+            <div className="class-btn">
+          <div className="error_div">
+            <p className="error">{error}</p>
+          </div>
+          {hasAccount ? (
+            <div className="sign-text">
+              <button onClick={handleLogin}>Sign in</button>
+              <p id="sign">
+                Don't have an account ?{" "}
+                <span
+                  onClick={() => setHasAccount(!hasAccount)}
+                  className="sign-link"
+                >
+                  Sign Up
+                </span>
+              </p>
             </div>
+          ) : (
+            <div className="sign-text">
+              <button onClick={handleSignup}>Sign up</button>
+              <p>
+                Have an account ?{" "}
+                <span
+                  onClick={() => setHasAccount(!hasAccount)}
+                  className="sign-link"
+                >
+                  Sign in
+                </span>
+              </p>
+            </div>
+          )}
+        </div>
         </form>
     </div>
   )
