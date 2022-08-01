@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import "./Signup.css"
+import logo from './1113-ai.png'
 
 function Signup() {
     const [name, setName] = useState('');
@@ -18,8 +19,9 @@ function Signup() {
         console.log("Signup");
     };
   return (
-    <div>
+    <div className="sign-div">
         <form>
+            <img src={logo} alt="logo" className="logo" />
             <div className="name-div">
                 <label>Name</label>
                 <input type="text" id="name" placeholder="Enter name" value={name} onChange={(e)=>setName(e.target.value)} />

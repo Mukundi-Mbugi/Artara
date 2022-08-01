@@ -1,65 +1,91 @@
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    font-family: 'Poppins', sans-serif;
+.sign-div {
+  width: 100%;
+  height: 100%;
+  background-image: url(./Art_Hero_1200x628.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-form h1{
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.logo {
+  height: 30vh;
+  width: 30vh;
 }
-form input{
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  width: 50%;
+  height: 50%;
+}
+form h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+form input {
     width: 100%;
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding: 0 10px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+form label{
+    font-size: 20px;
+    font-weight: 400;
     margin-bottom: 10px;
+    align-items: c;
 }
-form button{
-    width: 100%;
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #00a8ff;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
+form button {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #00a8ff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
 }
-form button:hover{
-    background-color: #0097e6;
+form button:hover {
+  background-color: #0097e6;
 }
 .error_div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .error_div{
-    background-color: white;
-  }
-  .error {
-    color: #f73030;
-    font-size: 12px;
-    text-align: center;
-    align-items: center;
-    background-color: white;
-  }
-  .sign-text{
-    background-color: white;
-  }
-  .sign-link {
-    color: #f73030;
-    cursor: pointer;
-    
-  }
-  .sign-link:hover {
-    color: rgb(16, 116, 247);
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.error_div {
+  background-color: white;
+}
+.error {
+  color: #f73030;
+  font-size: 12px;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+}
+.sign-text {
+  background-color: white;
+}
+.sign-link {
+  color: #f73030;
+  cursor: pointer;
+}
+.sign-link:hover {
+  color: rgb(16, 116, 247);
+}
