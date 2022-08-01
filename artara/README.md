@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# artara
+Artara is an online art gallery. A space for artists to share their work.
+
+artists can create a profile and upload their art.
+
+visitors can view art.
+    
+    []: # Language: markdown
+    []: # Path: README.md
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
