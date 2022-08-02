@@ -1,8 +1,11 @@
 import React from 'react'
+import './Exhibitions.css'
 
 function Exhibitions() {
   return (
-    <div>Exhibitions</div>
+    <div>
+      <h1>EXHIBITION EVENTS</h1>
+    </div>
   )
 }
 

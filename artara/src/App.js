@@ -12,6 +12,7 @@ function App() {
     <div>
       <Navbar />
       <Signup />
+      <Exhibitions />
       {/* <BrowserRouter>
         <Routes>
           <Route path="/" exact component={Home} />
