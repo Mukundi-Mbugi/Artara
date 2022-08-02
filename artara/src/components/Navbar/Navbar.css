@@ -57,3 +57,10 @@
 .nav-links a{
     color: #000;
 }
+.signup{
+    width: 20%;
+  }
+  .signup img{
+    height: 7vh;
+    width: 7vh;
+  }

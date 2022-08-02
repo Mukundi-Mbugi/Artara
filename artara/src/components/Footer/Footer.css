@@ -3,7 +3,7 @@
     width: 6vh;
 }
 .row{
-    background-color: #fefcfc;
+
     padding: 1rem;
     text-align: center;
     display: flex;
@@ -14,7 +14,7 @@
 }
 footer{
     margin-top: 20px;
-    background-color: #F3F3E3
+
 }
 .footer-social ul{
     display: flex;
@@ -23,7 +23,4 @@ footer{
 }
 p{
     font-size: 20px;
-}
-.container{
-    background-color: #F3F3E3
 }
