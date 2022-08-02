@@ -5,6 +5,7 @@ import Signup from './components/Signup/Signup';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Artists from './components/Artists/Artists';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Signup" component={Signup} />
       </Routes>
       </BrowserRouter> */}
+      <Footer />
     </div>
   );
 }
