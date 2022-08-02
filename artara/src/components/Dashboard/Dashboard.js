@@ -1,9 +1,13 @@
 import React from "react";
 import user from "./user.svg";
 import "./Dashboard.css";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 function Dashboard() {
   return (
+    <>
+    <Navbar />
     <div>
       <div className="container">
         <div className="row dash">
@@ -27,6 +31,8 @@ function Dashboard() {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
 

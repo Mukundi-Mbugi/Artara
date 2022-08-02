@@ -2,24 +2,24 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import './Home.css'
 import Item from "../Item/Item";
-import {useEffect} from "react";
+import {useState} from "react";
+import Footer from "../Footer/Footer";
 
-function Home({images}) {
-  function showImage(img) {
-    console.log(img);
-  }
+function Home({images, setShowCard, showCard}) {
 
-  console.log(images);
   return (
+    <>
+    <Navbar />
     <div className="container gallery-container">
       {images.map(image => (
-        <div key={image.id} className="image" onClick={showImage}>
-          <img src={image.url} alt="avatar" id="avatar" />
-          {/* <Item image={image} showImage={showImage} /> */}
-        </div>
+        
+          <Item image={image} showCard={showCard} setShowCard={setShowCard}/>
+
         
       ))}
     </div>
+    <Footer />
+    </>
   );
 }
 
