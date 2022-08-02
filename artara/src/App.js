@@ -8,6 +8,7 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Dashboard from './components/Dashboard/Dashboard';
 import {useEffect, useState} from "react"
+import CreateItem from './components/CreateItem/CreateItem';
 
 function App() {
   const [images, setImages] = useState([]);
@@ -22,6 +23,7 @@ function App() {
       <Navbar />
       <Home images={images}/>
       <Dashboard />
+      <CreateItem />
       <Signup />
       <Exhibitions />
       {/* <BrowserRouter>
