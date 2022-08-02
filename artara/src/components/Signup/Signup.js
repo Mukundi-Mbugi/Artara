@@ -22,23 +22,23 @@ function Signup() {
     <div className="sign-div">
         <form>
             <img src={logo} alt="logo" className="logo" />
-            <div className="name-div">
+            <div className="inputs-div">
                 <label>Name</label>
                 <input type="text" id="name" placeholder="Enter name" value={name} onChange={(e)=>setName(e.target.value)} />
             </div>
-            <div className="email-div">
+            <div className="inputs-div">
                 <label>Email</label>
                 <input type="email" id="email" placeholder="Enter email" value={email} onChange={(e)=>setEmail(e.target.value)} />
             </div>
-            <div className="password-div">
+            <div className="inputs-div">
                 <label>Password</label>
                 <input type="password" id="password" placeholder="Enter password" value={password} onChange={(e)=>setPassword(e.target.value)} />
             </div>
-            <div className="confirm-password-div">
+            <div className="inputs-div">
                 <label>Confirm Password</label>
                 <input type="password" id="confirm-password" placeholder="Confirm password" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} />
             </div>
-            <div className="image-div">
+            <div className="inputs-div">
                 <label>Image</label>
                 <input type="file" id="image" placeholder="Enter image" value={image} onChange={(e)=>setImage(e.target.value)} />
             </div>
