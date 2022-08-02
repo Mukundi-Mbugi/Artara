@@ -12,10 +12,8 @@ function Home({images, setShowCard, showCard}) {
     <Navbar />
     <div className="container gallery-container">
       {images.map(image => (
-        
           <Item image={image} showCard={showCard} setShowCard={setShowCard}/>
 
-        
       ))}
     </div>
     <Footer />
