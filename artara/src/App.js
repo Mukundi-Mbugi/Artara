@@ -7,11 +7,20 @@ import Artists from './components/Artists/Artists';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Dashboard from './components/Dashboard/Dashboard';
+import {useEffect, useState} from "react"
 
 function App() {
+  const [images, setImages] = useState([]);
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/albums/1/photos")
+    .then(res => res.json())
+    .then(data => setImages(data));
+  }, [])
+  
   return (
     <div>
       <Navbar />
+      <Home images={images}/>
       <Dashboard />
       <Signup />
       <Exhibitions />
