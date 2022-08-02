@@ -6,11 +6,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Artists from './components/Artists/Artists';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
   return (
     <div>
       <Navbar />
+      <Dashboard />
       <Signup />
       <Exhibitions />
       {/* <BrowserRouter>
