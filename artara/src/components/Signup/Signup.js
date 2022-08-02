@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import "./Signup.css"
-import logo from './1113-ai.png'
+import "../../App.css";
+import logo from './logo.png'
 
 function Signup() {
     const [name, setName] = useState('');
