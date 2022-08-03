@@ -5,19 +5,40 @@ import "../../App.css";
 import logo from './logo.png'
 
 function Signup() {
+  
+
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
-    const [image, setImage] = useState('');
     const [hasAccount, setHasAccount] = useState(false);
 
-    const handleLogin = () => {
+    const handleLogin = (e) => {
         console.log("Login");
     }
-    const handleSignup = () => {
-        console.log("Signup");
+    const handleSignup = (e) => {
+      e.preventDefault();
+
+      const artist = {
+        name: name,
+        email: email,
+        password: password,
+        confirmPassword: confirmPassword
+      }
+      fetch(`http://localhost:3000/artists`, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({artist})
+      }).then(res => res.json())
+      .then(data => {
+        console.log(data);
+        if (data.error) {
+          setError(data.error);
+        } else {
+          setHasAccount(true);
+        }
+      })
     };
   return (
     <div className="sign-div">
@@ -39,10 +60,6 @@ function Signup() {
                 <label>Confirm Password</label>
                 <input type="password" id="confirm-password" placeholder="Confirm password" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} />
             </div>
-            <div className="inputs-div">
-                <label>Image</label>
-                <input type="file" id="image" placeholder="Enter image" value={image} onChange={(e)=>setImage(e.target.value)} />
-            </div>
             <div className="error-div">
                 <label>{error}</label>
             </div>
@@ -55,7 +72,7 @@ function Signup() {
           </div>
           {hasAccount ? (
             <div className="sign-text">
-              <button onClick={handleLogin}>Sign in</button>
+              <button>Sign in</button>
               <p id="sign">
                 Don't have an account ?{" "}
                 <span
