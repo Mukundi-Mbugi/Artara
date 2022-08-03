@@ -6,7 +6,7 @@ import logo from './logo.png'
 
 function Signup() {
   
-
+    const [artist, setArtist] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -15,7 +15,27 @@ function Signup() {
     const [hasAccount, setHasAccount] = useState(false);
 
     const handleLogin = (e) => {
-        console.log("Login");
+        e.preventDefault();
+        const artist = {
+            name: name,
+            email: email,
+            password: password,
+            confirmPassword: confirmPassword
+        }
+        fetch(`http://localhost:3000/login`,{
+          method: 'POST',
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(artist)
+        }).then(res => res.json())
+        .then(data => {
+          setArtist(data);
+          if(data.error){
+            setError(data.error)
+          } else {
+            localStorage.setItem('token', data.token)
+            window.location.href = '/'
+          }
+        })
     }
     const handleSignup = (e) => {
       e.preventDefault();
@@ -72,7 +92,7 @@ function Signup() {
           </div>
           {hasAccount ? (
             <div className="sign-text">
-              <button>Sign in</button>
+              <button onClick={handleLogin}>Sign in</button>
               <p id="sign">
                 Don't have an account ?{" "}
                 <span

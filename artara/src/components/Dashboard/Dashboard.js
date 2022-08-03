@@ -5,6 +5,12 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
 function Dashboard() {
+
+  function handleLogout(){
+    fetch(`http://localhost:3000/logout`, {
+      method: "DELETE",
+    })
+  }
   return (
     <>
     <Navbar />
@@ -26,7 +32,7 @@ function Dashboard() {
         </div>
         <div className="row">
           <div className="col-md-12 log">
-            <button id="logout-btn">logout</button>
+            <button id="logout-btn" onClick={handleLogout}>logout</button>
           </div>
         </div>
       </div>
